@@ -1,6 +1,10 @@
+//ECMAScript Module (Modern Javascrip)
+//file type : .js or .mjs with type:"module" is optional
 // // import { userName } from './data';
-// console.log(userName) //work in javascript 
+// console.log(userName) //work in javascript
+
 //------------- two object in same module-----------------------------------
+//Commonjs:file type : .js or .cjs,type:"commonjs" is optional
  let info=require('./data')
  console.log(info.empInfo.empId)
   console.log(info.empInfo.empName)
