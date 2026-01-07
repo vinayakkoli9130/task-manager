@@ -6,6 +6,12 @@
 //------------- two object in same module-----------------------------------
 //Commonjs:file type : .js or .cjs,type:"commonjs" is optional
  let info=require('./data')
+
+// info.add(67,6)//without returnig function
+
+console.log(info.add(5,6))//with returnning
+console.log(info.add(5,5))
+
  console.log(info.empInfo.empId)
   console.log(info.empInfo.empName)
    console.log(info.empInfo.empSalary)
@@ -16,7 +22,7 @@
 
  //Destructuring
 
-  const {empInfo,empAdd}=require("./data")
+  const {empInfo,empAdd,add}=require("./data")
  console.log(empInfo.empId)
  console.log(empInfo.empName)
  console.log(empInfo.empSalary)
@@ -25,6 +31,9 @@
  console.log(empAdd.empDist)
  console.log(empAdd.empTaluka)
  console.log(empAdd.villaige)
+console.log("--------------------------------------------")
+//function 
+console.log(add(47,55))
 console.log("--------------------------------------------")
 const {empInfo:{empId,empName,empSalary},empAdd:{currCity,empDist,empTaluka,villaige}}=require("./data")
 console.log(empId)

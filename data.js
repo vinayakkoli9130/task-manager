@@ -23,7 +23,13 @@ let empAdd={
     villaige:"Nandur"
 }
 
+function add(a,b){
+    return a+b
+    // console.log(a+b)
+}
+
 module.exports={
     empInfo,
-    empAdd
+    empAdd,
+    add
 }
