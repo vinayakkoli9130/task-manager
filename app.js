@@ -4,6 +4,8 @@
 let data=require('./data')
 console.log(data)
 
+let {cityName}=require('./data')
+console.log(cityName)
 //----------------------------------
 
 //require():Used to import modules, JSON, and local files.
