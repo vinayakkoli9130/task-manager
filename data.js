@@ -2,7 +2,8 @@
 // export let userName="Vinayak Koli"
 
 //commonjs:beginner and node default
-
+//“module.exports is an object provided by node.js commonjs module
+// used to export values from a Node.js module.”
 module.exports={
     userName:"Vinayak Koli",
 cityName:"Pune",
