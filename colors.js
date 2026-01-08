@@ -9,4 +9,6 @@ console.log(color.green("from pune"))
 
 console.log(color.america("Learning Node.js"))
 
-console.log(color.strikethrough("Make Application"))
+console.log(color.strikethrough("Make Application......"))
+
+console.log(color.bgMagenta("Hello Coders"))
