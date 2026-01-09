@@ -1,11 +1,11 @@
 const http = require('http');
 
 http.createServer((req, resp) => {
-    // console.log(req) 
-    // console.log(req.url)//Log the requested URL:/test,/login
-    // console.log(req.headers)// Log the request headers
-    // console.log(req.headers.host)// Log the host:localhost:5800
-    // console.log(req.method)//Log the HTTP method (GET, POST, etc.)
+    console.log(req) 
+    console.log(req.url)//Log the requested URL:/test,/login
+    console.log(req.headers)// Log the request headers
+    console.log(req.headers.host)// Log the host:localhost:5800
+    console.log(req.method)//Log the HTTP method (GET, POST, etc.)
 
     //diplay pages on request
     if (req.url == "/") {
