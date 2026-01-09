@@ -1,3 +1,4 @@
+//Define Static API Data
 const userData=[
     {name:'Vinayak Koli',age:26,email:"vinny@test.com"},
     {name:'Ganesh Koli',age:29,email:"ganny@test.com"},
@@ -6,7 +7,7 @@ const userData=[
 
 const http=require("http");
 http.createServer((req,resp)=>{
- resp.setHeader("Content-Type","application/json")
- resp.write(JSON.stringify(userData))
- resp.end()
+ resp.setHeader("Content-Type","application/json")// Set the content type to JSON
+ resp.write(JSON.stringify(userData)) // Convert the userData array to a JSON string
+ resp.end()// End the response
 }).listen(6200)
