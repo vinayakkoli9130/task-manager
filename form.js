@@ -1,6 +1,7 @@
 const http=require('http')//imort http module
 const fs=require('fs');//file system for read file
-const queryString=require('querystring') //convert data into readable form
+const queryString=require('querystring'); //convert data into readable form
+const { resolveObjectURL } = require('buffer');
 
 http.createServer((req,resp)=>{
 fs.readFile("html/form.html","utf-8",(err,data)=>{
@@ -26,8 +27,26 @@ dataBody.push(chunk)
  req.on('end',()=>{
     let rawData=Buffer.concat(dataBody).toString()//contact and merge in to string
  let readableData=queryString.parse(rawData)
- console.log(readableData)
- })
+
+
+ let dataString=`My name is ${readableData.name} and my email id is ${readableData.email}`
+ 
+ //create file in sync
+//  fs.writeFileSync('text/'+readableData.name+".txt",dataString)//block process to create file then go to next step
+//  console.log("file created")
+
+//crete file into async
+
+fs.writeFile("text/"+readableData.name+".txt",dataString,'utf-8',(err)=>{//create file async without block process
+if(err){
+    resp.end("Internal Server Error")
+    return false;
+}else{
+    console.log("File Is Created")
+}
+})
+
+})
 
     resp.write("<h1>Data Is Submited</h1>")  
 }
@@ -35,7 +54,7 @@ dataBody.push(chunk)
 resp.end()
 })
 
-}).listen(4500)
+}).listen(3200)
 
 console.log("--------------------------------------------------------------------")
 // http.createServer((req,resp)=>{//create server
