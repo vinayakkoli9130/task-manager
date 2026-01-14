@@ -26,10 +26,13 @@ let basename=path.basename(file)//base name:mahesh.txt
 
 console.log(path.resolve(dirname,basename))
 
-//Determines whether {path} is an absolute path. An absolute path will always resolve
-//to the same location, regardless of the working directory.
-//path to test.
+/*Determines whether {path} is an absolute path. An absolute path will always resolve
+to the same location, regardless of the working directory.
+path to test.*/
 console.log(path.isAbsolute(file))//Output:false beacuse this is not full path 
+
+
+//Global Constunt that are not part of path module
 
 //The directory name of the current module.
 // This is the same as the path.dirname() of the __filename
