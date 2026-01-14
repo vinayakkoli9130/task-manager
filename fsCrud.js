@@ -37,7 +37,4 @@ else if(operation=="read"){//read file
 }else if(operation=="delete"){ //delte file
   fs.unlinkSync(fullName)
    console.log(fullName," file is deleted")
-
-}else{
-    console.log("operation not found")
 }
